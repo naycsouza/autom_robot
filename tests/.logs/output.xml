@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220906 00:10:49.763" rpa="false" schemaversion="3">
+<suite id="s1" name="Pesquisa Invalida" source="C:\Users\phbma\OneDrive\Área de Trabalho\recrutamento\tests\Pesquisa_Invalida.robot">
+<test id="s1-t1" name="Realizar uma pesquisa Inválida" line="7">
+<kw name="Acessar página home do site">
+<msg timestamp="20220906 00:10:49.796" level="FAIL">No keyword with name 'Acessar página home do site' found.</msg>
+<status status="FAIL" starttime="20220906 00:10:49.796" endtime="20220906 00:10:49.796"/>
+</kw>
+<kw name="Verificar se está na página certa">
+<status status="NOT RUN" starttime="20220906 00:10:49.798" endtime="20220906 00:10:49.798"/>
+</kw>
+<kw name="Inserir texto no campo de pesquisa">
+<arg>asgrhs</arg>
+<status status="NOT RUN" starttime="20220906 00:10:49.800" endtime="20220906 00:10:49.800"/>
+</kw>
+<kw name="Confirmar e buscar resultados">
+<status status="NOT RUN" starttime="20220906 00:10:49.802" endtime="20220906 00:10:49.802"/>
+</kw>
+<kw name="Finalizar e printar">
+<status status="NOT RUN" starttime="20220906 00:10:49.803" endtime="20220906 00:10:49.803"/>
+</kw>
+<status status="FAIL" starttime="20220906 00:10:49.793" endtime="20220906 00:10:49.804">No keyword with name 'Acessar página home do site' found.</status>
+</test>
+<doc>Cenário de pesquisa inválido</doc>
+<status status="FAIL" starttime="20220906 00:10:49.765" endtime="20220906 00:10:49.806"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Pesquisa Invalida">Pesquisa Invalida</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220906 00:10:49.790" level="ERROR">Error in file 'C:\Users\phbma\OneDrive\Área de Trabalho\recrutamento\tests\Pesquisa_Invalida.robot' on line 3: Resource file 'C:\Users\phbma\OneDrive\Área de Trabalho\recrutamento\tests\resources\Base.robot' does not exist.</msg>
+<msg timestamp="20220906 00:10:49.791" level="ERROR">Error in file 'C:\Users\phbma\OneDrive\Área de Trabalho\recrutamento\tests\Pesquisa_Invalida.robot' on line 4: Resource file 'C:\Users\phbma\OneDrive\Área de Trabalho\recrutamento\tests\resources\actions\Actions.robot' does not exist.</msg>
+</errors>
+</robot>

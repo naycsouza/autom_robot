@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220906 00:14:52.612" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Users\phbma\OneDrive\Área de Trabalho\recrutamento\tests">
+<suite id="s1-s1" name="Pesquisa Invalida" source="C:\Users\phbma\OneDrive\Área de Trabalho\recrutamento\tests\Pesquisa_Invalida.robot">
+<test id="s1-s1-t1" name="Realizar uma pesquisa Inválida" line="7">
+<kw name="Acessar página home do site" library="Base">
+<kw name="New Browser" library="Browser">
+<arg>${BROWSER}</arg>
+<arg>headless=false</arg>
+<arg>slowMo=00:00:00</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20220906 00:14:53.958" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "C:\\Users\\phbma\\OneDrive\\\u00c1rea de Trabalho\\recrutamento\\logs\\browser\\traces\\0e43c817-d53f-486b-ace0-3103994df029"}</msg>
+<msg timestamp="20220906 00:14:54.523" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"C:\\Users\\phbma\\OneDrive\\Área de Trabalho\\recrutamento\\logs\\browser\\traces\\0e43c817-d53f-486b-ace0-3103994df029"}</msg>
+<status status="PASS" starttime="20220906 00:14:53.957" endtime="20220906 00:14:54.523"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://www.olx.com.br/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20220906 00:14:59.172" level="INFO">Successfully initialized new page object and opened url: https://www.olx.com.br/</msg>
+<msg timestamp="20220906 00:14:59.172" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20220906 00:14:54.523" endtime="20220906 00:14:59.173"/>
+</kw>
+<kw name="Set Viewport Size" library="Browser">
+<arg>1280</arg>
+<arg>768</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<msg timestamp="20220906 00:14:59.190" level="INFO">Set viewport size to: [object Object]</msg>
+<status status="PASS" starttime="20220906 00:14:59.173" endtime="20220906 00:14:59.190"/>
+</kw>
+<status status="PASS" starttime="20220906 00:14:53.957" endtime="20220906 00:14:59.190"/>
+</kw>
+<kw name="Verificar se está na página certa" library="Actions">
+<kw name="Wait For Elements State" library="Browser">
+<arg>id=searchtext-input</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20220906 00:14:59.232" level="INFO">Waited for Element with selector id=searchtext-input at state visible</msg>
+<status status="PASS" starttime="20220906 00:14:59.192" endtime="20220906 00:14:59.232"/>
+</kw>
+<status status="PASS" starttime="20220906 00:14:59.191" endtime="20220906 00:14:59.232"/>
+</kw>
+<kw name="Inserir texto no campo de pesquisa" library="Actions">
+<arg>asgrhs</arg>
+<kw name="Fill Text" library="Browser">
+<arg>id=searchtext-input</arg>
+<arg>${texto}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220906 00:14:59.233" level="INFO">Fills the text 'asgrhs' in the given field.</msg>
+<status status="PASS" starttime="20220906 00:14:59.233" endtime="20220906 00:14:59.326"/>
+</kw>
+<status status="PASS" starttime="20220906 00:14:59.233" endtime="20220906 00:14:59.326"/>
+</kw>
+<kw name="Confirmar e buscar resultados" library="Actions">
+<kw name="Click" library="Browser">
+<arg>css=button[class='search-button-submit']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220906 00:14:59.327" endtime="20220906 00:14:59.853"/>
+</kw>
+<status status="PASS" starttime="20220906 00:14:59.327" endtime="20220906 00:14:59.853"/>
+</kw>
+<kw name="Finalizar e printar" library="Base">
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220906 00:15:03.855" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220906 00:14:59.854" endtime="20220906 00:15:03.855"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20220906 00:15:04.398" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220906 00:15:03.855" endtime="20220906 00:15:04.398"/>
+</kw>
+<status status="PASS" starttime="20220906 00:14:59.853" endtime="20220906 00:15:04.399"/>
+</kw>
+<status status="PASS" starttime="20220906 00:14:53.953" endtime="20220906 00:15:04.410"/>
+</test>
+<doc>Cenário de pesquisa inválido</doc>
+<status status="PASS" starttime="20220906 00:14:52.641" endtime="20220906 00:15:04.693"/>
+</suite>
+<suite id="s1-s2" name="Pesquisa Valida" source="C:\Users\phbma\OneDrive\Área de Trabalho\recrutamento\tests\Pesquisa_Valida.robot">
+<test id="s1-s2-t1" name="Realizar uma pesquisa Inválida" line="6">
+<kw name="Acessar página home do site" library="Base">
+<kw name="New Browser" library="Browser">
+<arg>${BROWSER}</arg>
+<arg>headless=false</arg>
+<arg>slowMo=00:00:00</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20220906 00:15:04.720" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "C:\\Users\\phbma\\OneDrive\\\u00c1rea de Trabalho\\recrutamento\\logs\\browser\\traces\\c838d637-1842-4ff7-88a1-9d2531e40507"}</msg>
+<msg timestamp="20220906 00:15:05.252" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"C:\\Users\\phbma\\OneDrive\\Área de Trabalho\\recrutamento\\logs\\browser\\traces\\c838d637-1842-4ff7-88a1-9d2531e40507"}</msg>
+<status status="PASS" starttime="20220906 00:15:04.718" endtime="20220906 00:15:05.252"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://www.olx.com.br/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20220906 00:15:09.439" level="INFO">Successfully initialized new page object and opened url: https://www.olx.com.br/</msg>
+<msg timestamp="20220906 00:15:09.439" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20220906 00:15:05.252" endtime="20220906 00:15:09.439"/>
+</kw>
+<kw name="Set Viewport Size" library="Browser">
+<arg>1280</arg>
+<arg>768</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<msg timestamp="20220906 00:15:09.456" level="INFO">Set viewport size to: [object Object]</msg>
+<status status="PASS" starttime="20220906 00:15:09.439" endtime="20220906 00:15:09.456"/>
+</kw>
+<status status="PASS" starttime="20220906 00:15:04.718" endtime="20220906 00:15:09.456"/>
+</kw>
+<kw name="Verificar se está na página certa" library="Actions">
+<kw name="Wait For Elements State" library="Browser">
+<arg>id=searchtext-input</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20220906 00:15:09.497" level="INFO">Waited for Element with selector id=searchtext-input at state visible</msg>
+<status status="PASS" starttime="20220906 00:15:09.457" endtime="20220906 00:15:09.497"/>
+</kw>
+<status status="PASS" starttime="20220906 00:15:09.457" endtime="20220906 00:15:09.498"/>
+</kw>
+<kw name="Inserir texto no campo de pesquisa" library="Actions">
+<arg>celular</arg>
+<kw name="Fill Text" library="Browser">
+<arg>id=searchtext-input</arg>
+<arg>${texto}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220906 00:15:09.500" level="INFO">Fills the text 'celular' in the given field.</msg>
+<status status="PASS" starttime="20220906 00:15:09.499" endtime="20220906 00:15:09.593"/>
+</kw>
+<status status="PASS" starttime="20220906 00:15:09.498" endtime="20220906 00:15:09.593"/>
+</kw>
+<kw name="Confirmar e buscar resultados" library="Actions">
+<kw name="Click" library="Browser">
+<arg>css=button[class='search-button-submit']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220906 00:15:09.594" endtime="20220906 00:15:10.253"/>
+</kw>
+<status status="PASS" starttime="20220906 00:15:09.594" endtime="20220906 00:15:10.253"/>
+</kw>
+<kw name="Finalizar e printar" library="Base">
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220906 00:15:14.256" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220906 00:15:10.255" endtime="20220906 00:15:14.256"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20220906 00:15:16.128" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220906 00:15:14.256" endtime="20220906 00:15:16.129"/>
+</kw>
+<status status="PASS" starttime="20220906 00:15:10.254" endtime="20220906 00:15:16.129"/>
+</kw>
+<status status="PASS" starttime="20220906 00:15:04.714" endtime="20220906 00:15:16.134"/>
+</test>
+<doc>Cenário de pesquisa inválido</doc>
+<status status="PASS" starttime="20220906 00:15:04.700" endtime="20220906 00:15:16.628"/>
+</suite>
+<status status="PASS" starttime="20220906 00:14:52.614" endtime="20220906 00:15:16.634"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Pesquisa Invalida">Tests.Pesquisa Invalida</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Pesquisa Valida">Tests.Pesquisa Valida</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
